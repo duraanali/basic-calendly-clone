@@ -11,8 +11,8 @@ console.log("props.startdate", props.startDate)
   /* 
     Update with your own Client Id and Api key 
   */
-  var CLIENT_ID = "69904705306-ent1tsrl53iloln41k25d4qn57vqdj7d.apps.googleusercontent.com"
-  var API_KEY = "AIzaSyCpRdNdUfdEvf5a063z_ZXTLq2MkGzuo9M"
+  var CLIENT_ID = ""
+  var API_KEY = ""
   var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"]
   var SCOPES = "https://www.googleapis.com/auth/calendar.events"
 
