@@ -18,6 +18,8 @@ import Integrations from './components/pages/Integrations';
 import TopNav from './components/TopNav';
 import EventTapNav from './components/EventTapNav';
 import Help from './components/pages/Help';
+import { AccountBalance } from '@material-ui/icons';
+import Account from './components/account/Index';
 
 
 function App() {
@@ -54,8 +56,7 @@ function App() {
       <PrivateRoute path="/create" component={EventAddForm} />
       <PrivateRoute path="/events/:id" component={EventEditForm} />
       <Route path="/public/:id" component={EventPublic} />
-   
-     
+      <Route path="/account" component={Account} />
       <Redirect from="*" to="/" />
     
     </Switch>

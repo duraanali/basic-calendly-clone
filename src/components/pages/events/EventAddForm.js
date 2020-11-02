@@ -38,7 +38,7 @@ function createUser(values, setSubmitting) {
     eventService.create(values)
         .then(() => {
             
-            history.push('/');
+            history.push('/home');
         })
         .catch(error => {
             setSubmitting(false);

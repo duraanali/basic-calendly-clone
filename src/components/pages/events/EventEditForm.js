@@ -38,7 +38,7 @@ function EventAddForm({ history, match }) {
   
         updateUser(id, values, setSubmitting)
           console.log("UPDATED PROMISE")
-          history.push('/');
+          history.push('/home');
 
       
 }
@@ -50,7 +50,7 @@ function updateUser(id, values, setSubmitting) {
     eventService.update(id, values)
         .then(() => {
             
-            history.push('/');
+            history.push('/home');
         })
         .catch(error => {
             setSubmitting(false);
