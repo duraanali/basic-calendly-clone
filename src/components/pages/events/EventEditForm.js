@@ -12,7 +12,6 @@ function EventAddForm({ history, match }) {
   const [events, setEvents] = useState({});
 
   useEffect(() => {
-    console.log("id", id)
     eventService.getById(id).then(event => {
       setEvents(event)
   });
@@ -37,7 +36,6 @@ function EventAddForm({ history, match }) {
     setStatus();
   
         updateUser(id, values, setSubmitting)
-          console.log("UPDATED PROMISE")
           history.push('/home');
 
       
@@ -46,7 +44,6 @@ function EventAddForm({ history, match }) {
 
 
 function updateUser(id, values, setSubmitting) {
-  console.log("UPDATED")
     eventService.update(id, values)
         .then(() => {
             
@@ -169,7 +166,7 @@ function updateUser(id, values, setSubmitting) {
               <div className="event-form-body-fields">
                 <label>Event Link</label>
                 <div className="event-form-body-url">
-                  calendly.com/duraanali/
+                  kulanify.com/duraanali/
                 </div>
                 <div className="event-form-body-url-input">
                   <input

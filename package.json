@@ -1,5 +1,5 @@
 {
-  "name": "calendly",
+  "name": "kulanify",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.3",
+    "clipboard-polyfill": "^3.0.1",
     "date-fns": "^2.16.1",
     "formik": "^2.1.4",
     "history": "^4.10.1",
@@ -26,6 +27,7 @@
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.4",
+    "react-timeslot-calendar": "^0.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "rxjs": "^6.3.3",

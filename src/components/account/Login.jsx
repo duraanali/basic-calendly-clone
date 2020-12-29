@@ -21,7 +21,7 @@ function Login({ history, location }) {
     accountService
       .login(email, password)
       .then(() => {
-        const { from } = location.state || { from: { pathname: "/" } };
+        const { from } = location.state || { from: { pathname: "/home" } };
         
         history.push(from);
       })

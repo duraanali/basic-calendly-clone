@@ -25,7 +25,6 @@ const accountService = {
 
 export default accountService;
 
-console.log("accountService", )
 function login(email, password) {
     return fetchWrapper.post(`${baseUrl}/authenticate`, { email, password })
         .then(user => {
@@ -46,11 +45,10 @@ function logout() {
 }
 
 function refreshToken() {
-    console.log("userSubject.next(user)", userSubject)
     return fetchWrapper.post(`${baseUrl}/refresh-token`, {})
         .then(user => {
             // publish user to subscribers and start timer to refresh token
-            console.log("userSubject.next", user)
+        
             userSubject.next(user);
             startRefreshTokenTimer();
             return user;
@@ -81,12 +79,10 @@ function resetPassword({ token, password, confirmPassword }) {
 }
 
 function getAll() {
-    console.log("GETALL RUN ACCOUNT");
     return fetchWrapper.get(baseUrl);
 }
 
 function getById(id) {
-    console.log("GET ID RUN ACCOUNT");
     return fetchWrapper.get(`${baseUrl}/${id}`);
 }
 
@@ -124,10 +120,8 @@ function _delete(id) {
 let refreshTokenTimeout;
 
 function startRefreshTokenTimer() {
-    console.log("test startrefreshtimer")
     // parse json object from base64 encoded jwt token
     const jwtToken = JSON.parse(atob(userSubject.value.jwtToken.split('.')[1]));
-    console.log("jwtToken", jwtToken)
 
     // set a timeout to refresh the token a minute before it expires
     const expires = new Date(jwtToken.exp * 1000);

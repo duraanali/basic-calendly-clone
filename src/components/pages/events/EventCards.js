@@ -7,6 +7,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { Dropdown } from "react-bootstrap";
+import * as clipboard from "clipboard-polyfill/text";
 
 export default function EventCards() {
 
@@ -30,7 +31,6 @@ export default function EventCards() {
   
 
 
-  console.log("LOGGED IN USER", accountId)
   function deleteEvent(id) {
     confirm({ description: 'Are you sure? Users will be unable to schedule further meetings with deleted event types. Meetings previously scheduled will not be affected.' })
     .then(() => {setEvents(
@@ -47,7 +47,6 @@ export default function EventCards() {
 })
   }
 
-  console.log("all events", events)
   return (
     <div>
       <div className="event-cards">
@@ -112,7 +111,7 @@ export default function EventCards() {
                 </div>
                 <div className="event-card-single-footer">
               
-                  <NavLink className="event-card-single-footer-left" to={`/public/${event.id}`}>
+                  <NavLink className="event-card-single-footer-left" to={`/public/${event.id}`} target="_blank">
                     /{event.eventLink}
                   </NavLink>
                   <div className="event-card-single-footer-right">

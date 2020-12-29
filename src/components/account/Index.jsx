@@ -22,7 +22,7 @@ function Account({ history, match }) {
     return (
         <div className="event-login-body">
                  <img src={logo} alt="Logo" width={35} height={35}/>
-                    <h3>Sign up with Calendly for free</h3>
+                    <h3>Sign up or Log in with Kulanify for free</h3>
             <div className="event-login-body-box">
                         <Switch>
                             <Route path={`${path}/login`} component={Login} />

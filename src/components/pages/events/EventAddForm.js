@@ -113,7 +113,7 @@ function updateUser(id, values, setSubmitting) {
               <div className="event-form-body-fields">
                 <label>Event Type</label>
                 <input
-                  type="text"
+                  type="number"
                   name="eventType"
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -121,13 +121,12 @@ function updateUser(id, values, setSubmitting) {
                   placeholder="i.e 30 Min"
                 />
                
+    
+               
 
-                {/* <Button variant="outlined" color="secondary" name="eventType"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value="15 Min" >
-        15 Min
-      </Button> */}
+                   
+
+
               </div>
 
               <div className="event-form-body-fields">
@@ -167,7 +166,7 @@ function updateUser(id, values, setSubmitting) {
               <div className="event-form-body-fields">
                 <label>Event Link</label>
                 <div className="event-form-body-url">
-                  calendly.com/duraanali/
+                  kulanify.com/duraanali/
                 </div>
                 <div className="event-form-body-url-input">
                   <input

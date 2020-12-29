@@ -18,7 +18,6 @@ export default function EventPublic({match}) {
   const [events, setEvents] = useState({});
 
   useEffect(() => {
-    console.log("id", id)
     eventService.getById(id).then(event => {
       setEvents(event)
   });
@@ -50,7 +49,7 @@ export default function EventPublic({match}) {
               </div>
               <div>
                 <VideocamIcon className="event-public-inner-left-info-time-icon" />{" "}
-                Location: {events.location}
+                {events.location}
               </div>
             </div>
 

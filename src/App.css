@@ -1059,6 +1059,7 @@ width: 50%;
   border-radius: 4px;
   padding: 9px;
   font-size: 18px;
+  width: 281px;
 }
 
 .event-public-inner-right-displayTime {
@@ -1094,7 +1095,7 @@ width: 50%;
   padding-right: 35px;
 }
 
-.event-form-body-fields-public > input[type="text"], input[type=password] {
+.event-form-body-fields-public > input[type="text"], input[type=password], input[type=number] {
   width: 100%;
     min-height: 46px;
     box-sizing: border-box;
@@ -1186,3 +1187,7 @@ width: 50%;
   margin-bottom: 30px;
   transform: scale(3);
 }
+
+
+
+

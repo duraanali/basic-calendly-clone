@@ -10,7 +10,6 @@ export default function EventHeader() {
 
   const user = accountService.userValue;
 
- console.log("user", user.id)
   return (
     <div>
       <table className="event-header-table">

@@ -57,7 +57,7 @@ function App() {
       <PrivateRoute path="/events/:id" component={EventEditForm} />
       <Route path="/public/:id" component={EventPublic} />
       <Route path="/account" component={Account} />
-      <Redirect from="*" to="/" />
+      <Redirect from="*" to="/home" />
     
     </Switch>
     </ConfirmProvider>

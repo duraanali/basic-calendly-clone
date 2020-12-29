@@ -13,7 +13,6 @@ export default function EventTapNav({match}) {
         return subscription.unsubscribe;
     }, []);
 
-  console.log(eventService.eventValue)
 // only show nav when logged in
 if (!user) return null;
 

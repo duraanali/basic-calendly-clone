@@ -25,7 +25,6 @@ function post(url, body) {
         credentials: 'include',
         body: JSON.stringify(body)
     };
-    console.log("fetchwrapper post", requestOptions)
     return fetch(url, requestOptions).then(handleResponse);
 }
 
@@ -53,7 +52,6 @@ function authHeader(url) {
     // return auth header with jwt if user is logged in and request is to the api url
     const user = accountService.userValue;
     const isLoggedIn = user && user.jwtToken;
-    console.log("isloggedin", accountService)
     const isApiUrl = url.startsWith(apiUrl);
     if (isLoggedIn && isApiUrl) {
         return { Authorization: `Bearer ${user.jwtToken}` };

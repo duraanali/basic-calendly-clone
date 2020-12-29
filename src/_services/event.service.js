@@ -33,7 +33,6 @@ function refreshToken() {
     return fetchWrapper.post(`${baseUrl}/refresh-token`, {})
         .then(event => {
             // publish event to subscribers and start timer to refresh token
-            console.log("refreshtoken event run")
             
             eventSubject.next(event);
             startRefreshTokenTimer();
@@ -54,7 +53,6 @@ function getById(id) {
 }
 
 function create(params) {
-    console.log("CREATE EVENT RUN", params)
     return fetchWrapper.post(baseUrl, params);
 }
 
@@ -73,7 +71,6 @@ function update(id, params) {
 
 // prefixed with underscore because 'delete' is a reserved word in javascript
 function _delete(id) {
-    console.log("====DELETE RUN=====", id, baseUrl)
     return fetchWrapper.delete(`${baseUrl}/${id}`)
         .then(x => {
 
@@ -89,7 +86,6 @@ let refreshTokenTimeout;
 function startRefreshTokenTimer() {
     // parse json object from base64 encoded jwt token
     const jwtToken = JSON.parse(atob(eventSubject.value.jwtToken.split('.')[1]));
-    console.log("jwtToken", jwtToken)
 
     // set a timeout to refresh the token a minute before it expires
     const expires = new Date(jwtToken.exp * 1000);
